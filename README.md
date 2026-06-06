@@ -1,26 +1,18 @@
 # Kerala Elections
 
-A static, data-driven reference site for Kerala Legislative Assembly elections (1982–2026),
-the 2024 Lok Sabha result in Kerala, and recent Assembly by-elections.
+A visual history of Kerala's elections — every Legislative Assembly election from **1982 to 2026**, the **2024 Lok Sabha** result in the state, and recent Assembly **by-elections**. Mapped seat by seat, with charts and analysis.
 
 **Live:** https://thunacare-alt.github.io/kerala-elections/
 
-## What's here
-- **Home** — seats-by-front 1982–2026, front vote-share and turnout over time, plus the long-view analysis.
-- **Assembly Elections** — per-election pages: full sortable/searchable constituency table, front seats + vote-share charts, the government formed, and a data-derived analysis (result, swing vs the previous election, closest and largest-margin contests, turnout).
-- **Lok Sabha 2024** — Kerala's 20 seats, party tally and analysis.
-- **By-elections** — 16 Assembly by-elections (2012–2025).
-- **About & Sources** — data source, methodology and caveats.
+## Sections
+- **Home** — seats by front across every election, vote-share and turnout trends, and the long-view analysis.
+- **Elections** — per-election pages: a full sortable/searchable 140-seat table, front-seats and vote-share charts, the government formed, closest and widest margins, and the story of the result.
+- **Constituency Explorer** — search any seat and trace its winner, party and margin across every election since 1982.
+- **Lok Sabha 2024** — Kerala's 20 parliamentary seats.
+- **By-elections** — sixteen mid-term Assembly contests, 2012–2025.
 
-## Data
-All figures are derived from [keralaassembly.org](http://www.keralaassembly.org/), an **unofficial
-database based on official figures**. The site is fully static — pages were collected, parsed into
-spreadsheets, then converted to the compact JSON in [`data/`](data/). Nothing is scraped at view time.
-
-The written analyses are **AI-assisted**: prose is generated from the data, but every number
-(seats, vote shares, margins, swings, turnout) is computed directly from the workbooks. Not an
-official source — verify against Election Commission records before citing.
+## How figures are computed
+Everything is derived from constituency-level results. Turnout is valid votes ÷ electorate (uniform across years); vote share by front sums party votes into fronts; seats by front use each winner's front (recorded per seat from 2011, and grouped by winning party for 1982–2006, validated against the known front tallies for 1982, 1987, 1996 and 2001). See the in-site **About** page for caveats (delimitation, pre-2011 turnout/NOTA availability, shifting front alignments).
 
 ## Tech
-Plain HTML/CSS/JS, no build step. [Chart.js](https://www.chartjs.org/) via CDN. Served from the
-repository root via GitHub Pages.
+Plain static HTML / CSS / JS — no build step. Typography: Fraunces + Inter. Charts: Chart.js via CDN. Served from the repository root on GitHub Pages. Front colours: LDF `#E03131`, UDF `#1971C2`, NDA `#F08C00`, Others `#868E96`.

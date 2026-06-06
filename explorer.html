@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>By-elections — Kerala Elections</title>
+<title>Constituency Explorer — Kerala Elections</title>
+<meta name="description" content="Search any Kerala Assembly constituency and trace its winner, party and margin across every election from 1982 to 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,36 +26,29 @@
 
 <main>
   <header style="padding:48px 0 8px">
-    <div class="eyebrow">Assembly by-elections · 2012–2025</div>
-    <h1 style="font-size:clamp(30px,5vw,52px);margin:8px 0 6px">The mid-term&nbsp;contests</h1>
-    <p class="deck" style="color:var(--ink-soft);max-width:60ch">Individual Assembly seats fought between general elections — a running read on the mood of the state.</p>
-    <div class="stats" id="byStats" style="margin-top:20px"></div>
+    <div class="eyebrow">Constituency explorer</div>
+    <h1 style="font-size:clamp(30px,5vw,52px);margin:8px 0 6px">Trace any seat through the&nbsp;decades</h1>
+    <p class="deck" style="color:var(--ink-soft);max-width:60ch">Search a constituency to see who won it — and by how much — at every election it has contested since 1982.</p>
   </header>
 
-  <section class="section">
-    <div class="grid2">
-      <div class="card"><h3>By-elections won, by front</h3><div class="sub">Front of the winning candidate</div>
-        <div class="chart-wrap"><canvas id="byChart"></canvas></div></div>
-      <div class="card"><h3>Analysis</h3><div class="sub">What the by-polls show</div>
-        <div class="prose" id="byAnalysis" style="font-size:17px"></div></div>
+  <div class="explorer-head section" style="margin-top:24px">
+    <div class="suggest">
+      <input type="search" id="q" placeholder="Type a constituency — e.g. Puthuppally, Dharmadam, Nemom…" autocomplete="off" aria-label="Search constituency">
+      <div class="suggest-list" id="sug"></div>
     </div>
-  </section>
+  </div>
 
-  <section class="section">
-    <div class="eyebrow">Every contest</div>
-    <h2 class="section-h">All by-elections</h2>
-    <p class="section-lead">Click a heading to sort; type to search.</p>
-    <div id="byTable"></div>
+  <section class="section" style="margin-top:26px">
+    <div id="result"></div>
   </section>
 </main>
 
 <footer><div class="foot-in">
   <a class="brand" href="index.html"><span class="mark"></span>Kerala Elections</a>
-  <div>Kerala Legislative Assembly · 1982–2026 · <a href="explorer.html">Constituency explorer</a> · <a href="about.html">About</a></div>
+  <div>Kerala Legislative Assembly · 1982–2026 · <a href="about.html">About</a></div>
 </div></footer>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="assets/common.js?v=2"></script>
-<script src="assets/app-byelections.js?v=2"></script>
+<script src="assets/app-explorer.js?v=2"></script>
 </body>
 </html>

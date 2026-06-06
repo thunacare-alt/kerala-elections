@@ -1,43 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Lok Sabha 2024 (Kerala) — Kerala Elections</title>
-<link rel="stylesheet" href="assets/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=2">
 </head>
 <body>
-<header class="site"><div class="bar">
-  <a class="brand" href="index.html"><span class="dot"></span>Kerala Elections</a>
-  <nav class="top">
+<nav class="nav"><div class="nav-in">
+  <a class="brand" href="index.html"><span class="mark"></span>Kerala&nbsp;Elections</a>
+  <div class="nav-links">
     <a data-nav="home" href="index.html">Home</a>
-    <a data-nav="year" href="year.html">Assembly Elections</a>
-    <a data-nav="ls" href="loksabha.html">Lok Sabha 2024</a>
+    <a data-nav="year" href="year.html">Elections</a>
+    <a data-nav="explorer" href="explorer.html">Explorer</a>
+    <a data-nav="ls" href="loksabha.html">Lok Sabha</a>
     <a data-nav="by" href="byelections.html">By-elections</a>
-    <a data-nav="about" href="about.html">About &amp; Sources</a>
-  </nav>
-</div></header>
-<main>
-  <section class="hero">
-    <div class="kicker">Parliament · 18th Lok Sabha</div>
-    <h1>Kerala in the 2024 Lok Sabha election</h1>
-    <p>Results from all 20 of Kerala's Lok Sabha constituencies in the 2024 general election — winners, parties, margins and turnout.</p>
-    <div class="statline" id="ls-stats"></div>
-  </section>
-  <div class="grid two">
-    <div class="card chart-card"><h3>Seats by party</h3><div class="sub">Kerala's 20 seats</div>
-      <div class="chart-wrap"><canvas id="lsParty"></canvas></div></div>
-    <div class="card"><h3>Analysis</h3><div class="analysis" id="ls-analysis"></div></div>
+    <a data-nav="about" href="about.html">About</a>
+    <button class="theme-btn" id="themeBtn" title="Toggle light / dark" aria-label="Toggle theme">☾</button>
   </div>
-  <div id="disc-ls"></div>
-  <h2 class="section-title">Constituency results</h2>
-  <div id="ls-table"></div>
+</div></nav>
+
+<main>
+  <header style="padding:48px 0 8px">
+    <div class="eyebrow">Parliament · 18th Lok Sabha</div>
+    <h1 style="font-size:clamp(30px,5vw,52px);margin:8px 0 6px">Kerala in the 2024 Lok Sabha&nbsp;election</h1>
+    <p class="deck" style="color:var(--ink-soft);max-width:60ch">All 20 of the state's parliamentary seats — winners, parties, margins and turnout.</p>
+    <div class="stats" id="lsStats" style="margin-top:20px"></div>
+  </header>
+
+  <section class="section">
+    <div class="grid2">
+      <div class="card"><h3>Seats by party</h3><div class="sub">Kerala's 20 seats, coloured by front</div>
+        <div class="chart-wrap"><canvas id="lsParty"></canvas></div></div>
+      <div class="card"><h3>Analysis</h3><div class="sub">How the state voted</div>
+        <div class="prose" id="lsAnalysis" style="font-size:17px"></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">Every seat</div>
+    <h2 class="section-h">Constituency results</h2>
+    <p class="section-lead">Click a heading to sort; type to search.</p>
+    <div id="lsTable"></div>
+  </section>
 </main>
-<footer><div class="bar">
-  Data: <a href="http://www.keralaassembly.org/" rel="noopener noreferrer" target="_blank">keralaassembly.org</a> — unofficial database based on official figures. Analyses are AI-assisted. · <a href="about.html">About</a>
+
+<footer><div class="foot-in">
+  <a class="brand" href="index.html"><span class="mark"></span>Kerala Elections</a>
+  <div>Kerala Legislative Assembly · 1982–2026 · <a href="explorer.html">Constituency explorer</a> · <a href="about.html">About</a></div>
 </div></footer>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="assets/common.js"></script>
-<script src="assets/app-loksabha.js"></script>
+<script src="assets/common.js?v=2"></script>
+<script src="assets/app-loksabha.js?v=2"></script>
 </body>
 </html>
