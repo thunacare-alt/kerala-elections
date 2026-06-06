@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>By-elections — Kerala Elections</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="bar">
+  <a class="brand" href="index.html"><span class="dot"></span>Kerala Elections</a>
+  <nav class="top">
+    <a data-nav="home" href="index.html">Home</a>
+    <a data-nav="year" href="year.html">Assembly Elections</a>
+    <a data-nav="ls" href="loksabha.html">Lok Sabha 2024</a>
+    <a data-nav="by" href="byelections.html">By-elections</a>
+    <a data-nav="about" href="about.html">About &amp; Sources</a>
+  </nav>
+</div></header>
+<main>
+  <section class="hero">
+    <div class="kicker">Assembly by-elections · 2012–2025</div>
+    <h1>Kerala Assembly by-elections</h1>
+    <p>Mid-term contests for individual Assembly seats, with the winner, party, margin and turnout for each.</p>
+    <div class="statline" id="by-stats"></div>
+  </section>
+  <div class="grid two">
+    <div class="card chart-card"><h3>By-elections won, by front</h3><div class="sub">Winning candidate's front</div>
+      <div class="chart-wrap"><canvas id="byChart"></canvas></div></div>
+    <div class="card"><h3>Analysis</h3><div class="analysis" id="by-analysis"></div></div>
+  </div>
+  <div id="disc-by"></div>
+  <h2 class="section-title">All by-elections</h2>
+  <div id="by-table"></div>
+</main>
+<footer><div class="bar">
+  Data: <a href="http://www.keralaassembly.org/" rel="noopener noreferrer" target="_blank">keralaassembly.org</a> — unofficial database based on official figures. Analyses are AI-assisted. · <a href="about.html">About</a>
+</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-byelections.js"></script>
+</body>
+</html>

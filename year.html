@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assembly election — Kerala Elections</title>
+<meta name="description" content="Full constituency results, vote share, government formed and analysis for each Kerala Assembly election.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="bar">
+  <a class="brand" href="index.html"><span class="dot"></span>Kerala Elections</a>
+  <nav class="top">
+    <a data-nav="home" href="index.html">Home</a>
+    <a data-nav="year" href="year.html">Assembly Elections</a>
+    <a data-nav="ls" href="loksabha.html">Lok Sabha 2024</a>
+    <a data-nav="by" href="byelections.html">By-elections</a>
+    <a data-nav="about" href="about.html">About &amp; Sources</a>
+  </nav>
+</div></header>
+
+<main>
+  <div class="controls">
+    <label for="yearsel" style="font-weight:700">Election year:</label>
+    <select id="yearsel"></select>
+    <button class="btn" id="prev">‹ Previous</button>
+    <button class="btn" id="next">Next ›</button>
+  </div>
+
+  <section class="hero" id="summary"><div class="loading">Loading…</div></section>
+
+  <div class="grid two">
+    <div class="card chart-card">
+      <h3>Seats by front</h3><div class="sub" id="seat-src"></div>
+      <div class="chart-wrap"><canvas id="seatChart"></canvas></div>
+    </div>
+    <div class="card chart-card">
+      <h3>Vote share by front</h3><div class="sub">Share of valid votes</div>
+      <div class="chart-wrap"><canvas id="voteChart"></canvas></div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Analysis</h2>
+  <div class="analysis" id="analysis"></div>
+  <div id="disc-year"></div>
+
+  <div class="grid two" style="margin-top:18px">
+    <div class="card"><h3>Closest contests</h3><ul class="mini-list" id="closest"></ul></div>
+    <div class="card"><h3>Largest margins</h3><ul class="mini-list" id="biggest"></ul></div>
+  </div>
+
+  <h2 class="section-title">Government formed</h2>
+  <div class="card" id="ministry"></div>
+
+  <h2 class="section-title">Constituency results</h2>
+  <p style="color:var(--muted);margin-top:-6px">One row per constituency — the winner, party, front, margin and runner-up. Click a column to sort; type to search.</p>
+  <div id="results-table"></div>
+</main>
+
+<footer><div class="bar">
+  Data: <a href="http://www.keralaassembly.org/" rel="noopener noreferrer" target="_blank">keralaassembly.org</a> — unofficial database based on official figures. Analyses are AI-assisted. · <a href="about.html">About &amp; methodology</a>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-year.js"></script>
+</body>
+</html>

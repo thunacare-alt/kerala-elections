@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kerala Elections — Assembly results & analysis, 1982–2026</title>
+<meta name="description" content="Constituency-level Kerala Legislative Assembly results from 1982 to 2026, with front-wise seats, vote share, turnout and data-derived analysis.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="bar">
+  <a class="brand" href="index.html"><span class="dot"></span>Kerala Elections</a>
+  <nav class="top">
+    <a data-nav="home" href="index.html">Home</a>
+    <a data-nav="year" href="year.html">Assembly Elections</a>
+    <a data-nav="ls" href="loksabha.html">Lok Sabha 2024</a>
+    <a data-nav="by" href="byelections.html">By-elections</a>
+    <a data-nav="about" href="about.html">About &amp; Sources</a>
+  </nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <div class="kicker">Kerala Legislative Assembly · 1982–2026</div>
+    <h1>Ten elections, two fronts, one of India's closest contests</h1>
+    <p>Constituency-level results for every Kerala Assembly election from 1982 to 2026 — seats and vote share by front, turnout, winning margins, and the government formed after each poll. All charts and figures are computed directly from the source data.</p>
+    <div class="statline" id="headline-stats"></div>
+  </section>
+
+  <h2 class="section-title">The long view</h2>
+  <div class="grid two">
+    <div class="card chart-card">
+      <h3>Seats by front, 1982–2026</h3>
+      <div class="sub">140-seat Assembly · stacked by front</div>
+      <div class="chart-wrap"><canvas id="seatsChart"></canvas></div>
+    </div>
+    <div class="card chart-card">
+      <h3>Front vote share over time</h3>
+      <div class="sub">Share of valid votes (computed from candidate totals)</div>
+      <div class="chart-wrap"><canvas id="voteChart"></canvas></div>
+    </div>
+  </div>
+  <div class="grid two" style="margin-top:20px">
+    <div class="card chart-card">
+      <h3>Turnout over time</h3>
+      <div class="sub">Valid votes ÷ electorate</div>
+      <div class="chart-wrap"><canvas id="turnoutChart"></canvas></div>
+    </div>
+    <div class="card chart-card">
+      <h3>Combined analysis</h3>
+      <div class="sub">The pattern across ten elections</div>
+      <div class="analysis" id="combined-analysis"></div>
+    </div>
+  </div>
+  <div id="disc-home"></div>
+
+  <h2 class="section-title">Browse by election</h2>
+  <div class="grid cards" id="year-cards"></div>
+</main>
+
+<footer><div class="bar">
+  Data: <a href="http://www.keralaassembly.org/" rel="noopener noreferrer" target="_blank">keralaassembly.org</a> — an unofficial database based on official figures. Analyses are AI-assisted and computed from that data. Not an official source. · <a href="about.html">About &amp; methodology</a>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-home.js"></script>
+</body>
+</html>
